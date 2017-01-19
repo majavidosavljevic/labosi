@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+#define GG 100
+#define DG -100
+
+int main() {
+	int i, n, *p, max, min;
+	printf("unesi polje proizvoljne velicine: ");
+	scanf("%d", &n);
+	p = (int*)malloc(n * sizeof(int));
+	srand((unsigned)time(NULL));
+	
+	for (i = 0; i < n; i++) {
+		p[i] = DG + rand() % (GG - DG + 1);
+		min = max = p[0];
+		if (p[i] > max) {
+			max = p[i];
+		}
+		if (p[i] < min) {
+			min = p[i];
+		}
+	} 
+	printf("%d %d\n", max, min);
+	free(p);
+	return 0;
+}
