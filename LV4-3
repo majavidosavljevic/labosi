@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int i = 0;
+	float a, srvr;
+	float zbroj = 0;
+	printf("unesi osam brojeva iz intervala [-5,5]\n");
+	for (i; i < 8; i++) {
+		do {
+			scanf("%f", &a);
+		} while (a < -5 || a>5);
+	zbroj = zbroj + a;
+	srvr = zbroj / 8;
+	}
+	printf("Srednja vrijednost je: %.2f\n", srvr);
+
+
+	return 0;
+}
