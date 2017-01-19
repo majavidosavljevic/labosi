@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int matrica[10][10];
+	int m, n;
+	int min;
+	printf("unesi velicinu matrice m x n\n");
+	do {
+		scanf("%d %d", &m, &n);
+	} while (m < 0 || m>11 || n < 0 || n>11);
+	printf("popuni matricu:\n");
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			scanf("%d", &matrica[i][j]);
+		}
+	}
+	min = matrica[0][0];
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			if (matrica[i][j] < min) {
+				min = matrica[i][j];
+			}
+		}
+	}
+	printf("najmanji element u matrici je %d\n", min);
+	return 0;
+}
