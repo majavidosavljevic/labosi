@@ -1,0 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int a, b, o, p;
+	printf("unesi visinu i sirinu pravokutnika: \n");
+	scanf("%d %d", &a, &b);
+	o = a + b;
+	p = 2 * (2*a + 4*b);
+	printf("opseg pravokutnika je %d, a povrsina kojoj je visina ucevana za 2, a sirina za 4 je %d \n", o, p);
+	return 0;
+}
