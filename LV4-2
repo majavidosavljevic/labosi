@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int a, b,i;
+	printf("unesi dva cijela broja tako da je drugi veci od prvog: ");
+	do {
+		scanf("%d %d", &a, &b);
+		if (a > b) {
+			printf("krivi unos!\n");
+		}
+	} while (a > b);
+	a++;
+	for (i = a; a < b; a++)
+	{
+		printf("%d\n", i++);
+	}
+	
+	return 0;
+}
